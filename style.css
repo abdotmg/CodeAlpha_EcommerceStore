@@ -212,4 +212,80 @@ html {
 .footer h2 {
   margin-bottom: 10px;
 }
- 
+ @media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .products-section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 50px;
+  }
+
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 320px;
+  }
+
+  .product-info h3 {
+    font-size: 34px;
+  }
+
+  .product-info p {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 30px;
+  }
+
+  .product-btn {
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  .form-box {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 30px 20px;
+  }
+
+}
