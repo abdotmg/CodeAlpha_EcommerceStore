@@ -7,15 +7,14 @@
 
 body {
   background: #f4f4f4;
+  overflow-x: hidden;
 }
 
 /* Navbar */
-
 .navbar {
   background: #111;
   color: white;
   padding: 20px 50px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,25 +41,19 @@ body {
 }
 
 /* Hero */
-
 .hero {
-  height: 80vh;
-
-  background: linear-gradient(
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
-    ),
+  min-height: 80vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url("https://images.unsplash.com/photo-1523275335684-37898b6baf30");
-
   background-size: cover;
   background-position: center;
-
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-
   color: white;
+  padding: 40px 20px;
 }
 
 .hero-content h1 {
@@ -82,6 +75,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .shop-btn:hover {
@@ -89,7 +83,6 @@ body {
 }
 
 /* Products */
-
 .products-section {
   padding: 70px 50px;
 }
@@ -102,7 +95,7 @@ body {
 
 .products-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
@@ -111,12 +104,12 @@ body {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
   transition: 0.3s;
+  width: 100%;
 }
 
 .product-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .product-card img {
@@ -132,6 +125,11 @@ body {
 .product-info h3 {
   margin-bottom: 10px;
   font-size: 24px;
+}
+
+.product-info p {
+  margin-bottom: 15px;
+  line-height: 1.7;
 }
 
 .price {
@@ -150,12 +148,27 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .product-btn:hover {
   background: gold;
   color: black;
-}.form-box {
+}
+
+/* Details */
+.details-card {
+  max-width: 900px;
+  margin: auto;
+}
+
+.details-card img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Forms */
+.form-box {
   max-width: 450px;
   margin: auto;
   background: white;
@@ -181,28 +194,10 @@ body {
 .form-box a {
   color: black;
   font-weight: bold;
-}.details-card {
-  max-width: 900px;
-  margin: auto;
 }
 
-.details-card img {
-  height: 400px;
-  object-fit: cover;
-}
-
-.product-info p {
-  margin-bottom: 15px;
-  line-height: 1.7;
-}
-
-button {
-  font-weight: bold;
-}
-
-html {
-  scroll-behavior: smooth;
-}.footer {
+/* Footer */
+.footer {
   background: #111;
   color: white;
   text-align: center;
@@ -212,35 +207,50 @@ html {
 .footer h2 {
   margin-bottom: 10px;
 }
- @media (max-width: 768px) {
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
   .navbar {
+    width: 100%;
+    padding: 18px 12px;
     flex-direction: column;
-    padding: 20px;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
   }
 
   .logo {
-    font-size: 40px;
+    font-size: 34px;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
   .nav-links a {
-    font-size: 18px;
+    background: #222;
+    padding: 10px 4px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
   }
 
   .hero {
-    height: auto;
-    padding: 80px 20px;
+    min-height: 70vh;
+    padding: 70px 20px;
   }
 
   .hero-content h1 {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   .hero-content p {
@@ -248,11 +258,12 @@ html {
   }
 
   .products-section {
-    padding: 40px 20px;
+    padding: 45px 18px;
   }
 
   .section-title {
-    font-size: 50px;
+    font-size: 42px;
+    margin-bottom: 35px;
   }
 
   .products-container {
@@ -260,32 +271,58 @@ html {
   }
 
   .product-card img {
-    height: 320px;
+    height: 300px;
   }
 
   .product-info h3 {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   .product-info p {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .price {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .product-btn {
-    font-size: 18px;
-    padding: 16px;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .details-card img {
+    height: 320px;
   }
 
   .form-box {
     width: 100%;
+    padding: 25px;
   }
 
   .footer {
     padding: 30px 20px;
   }
+}
 
+@media (max-width: 430px) {
+  .logo {
+    font-size: 30px;
+  }
+
+  .nav-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .product-card img {
+    height: 270px;
+  }
 }
